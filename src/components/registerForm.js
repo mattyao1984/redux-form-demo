@@ -9,7 +9,7 @@ const RegisterForm = (props) => (
             {value: 'tab', title: 'Tab'},
             {value: 'space', title: 'Space'}
         ]}></Field>
-        <Field id="news-letter" name="news-letter" component={CustomInput} type="checkbox" label="Sign up to newsletter?"></Field>
+        <Field id="newsletter" name="newsletter" component={CustomInput} type="checkbox" label="Sign up to newsletter?"></Field>
         <div className="field-item">
             <button type="submit">Submit</button>
         </div>
