@@ -5,13 +5,11 @@ const submitHandler = (value) => {
   console.log(JSON.stringify(value, null, 4));
 };
 
-const getInitialValues = () => {
-  return {
-    name: 'Matt',
-    preference: 'space',
-    newsletter: 'true'
-  }
-};
+const getInitialValues = () => ({
+  firstname: 'Matt',
+  preference: 'space',
+  newsletter: 'true'
+});
 
 const RegisterFormContainer = () => (
   <RegisterForm 

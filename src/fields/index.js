@@ -4,6 +4,11 @@ const CustomInput = props => (
   <div className="field-item">
     <label htmlFor={props.id}>{props.label}</label>
     <input {...props.input} id={props.id} name={props.name} type={props.type} />
+    {(props.meta.error && props.meta.touched) && (
+      <h6 className="error" style={{color: 'red'}}>
+        {props.meta.error}
+      </h6>
+    )}
   </div>
 );
 
