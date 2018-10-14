@@ -2,6 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { CustomInput, CustomSelect } from '../fields';
 import validate from '../validation';
+import './registerForm.css';
 
 const RegisterForm = (props) => (
     <form onSubmit={props.submitHandler}>
