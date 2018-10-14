@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import RegisterForm from '../components/registerForm';
+import { SubmissionError } from 'redux-form';
 
-const submitHandler = (value) => {
-  console.log(JSON.stringify(value, null, 4));
+const submitHandler = values => {
+  if (['kent', 'andy', 'matt', 'john'].includes(values.username)) {
+    throw new SubmissionError({
+      username: 'Username already taken'
+    });
+  } else {
+    window.alert(JSON.stringify(values, null, 4));
+  }
 };
 
 const getInitialValues = () => ({

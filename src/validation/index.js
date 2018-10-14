@@ -13,6 +13,14 @@ const validate = values => {
     errors.username = 'Username must be shorter than 16 characters';
   }
 
+  if (!values.password) {
+    errors.password = 'Password is required';
+  }
+
+  if (values.password !== values.confirmPassword) {
+    errors.password = 'Password must be the same.'
+  }
+
   return errors;
 };
 
